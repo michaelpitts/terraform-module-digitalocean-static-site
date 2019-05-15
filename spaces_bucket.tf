@@ -1,4 +1,4 @@
-resource "digitalocean_spaces_bucket" "foobar" {
-  name   = "foobar"
-  region = "nyc3"
+resource "digitalocean_spaces_bucket" "test" {
+  name   = "test"
+  region = "nyc1"
 }
