@@ -1,13 +1,22 @@
-variable "digitalocean_token" {
-  description = "authentication token for digitalocean"
+variable "bucket_name" {
+  description = "(Required) The name of the bucket"
   type        = "string"
 }
 
-variable "access_id" {
-  description = "access ID for the digitalocean bucket"
+variable "bucket_region" {
+  description = "The region where the bucket resides (Defaults to nyc3)"
   type        = "string"
+  default     = "nyc3"
 }
 
-variable "secret_key" {
-  description = "secret access key for the digitalocean bucket"
+variable "bucket_acl" {
+  description = "Canned ACL applied on bucket creation (private or public-read)"
+  type        = "string"
+  default     = "private"
+}
+
+variable "bucket_force_destroy" {
+  description = "Unless true, the bucket will only be destroyed if empty (Defalts to false)"
+  type        = "string"
+  default     = false
 }
